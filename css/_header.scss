@@ -1,0 +1,126 @@
+.header{
+    overflow-x: hidden;
+    
+    &.open{
+
+         
+
+        .header__toggle{
+
+            > span:first-child{
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2){
+                opacity: 0;
+            }
+
+            > span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .overlay{
+        opacity: 0;
+        z-index: 9;
+        position: fixed;
+        right: 0px;
+        top: 60px;
+        left: 0px;
+        bottom: 0px;
+        background-image: linear-gradient($darkBlue, transparent);
+    } 
+
+    nav{
+        padding-top: 1.0625rem ;
+        padding-bottom: 1.0625rem;
+        position: relative;
+        background-color: $White;
+    }
+
+    &__logo{
+
+        img{
+            width: 8.8125rem;
+            height: 1.375rm;
+            
+        }
+    }
+
+    &__toggle{
+
+        > span{
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__menu{
+        background: $White;
+        padding: 1.625rem ;
+        width: calc(100% - 3rem) ;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5rem;
+        z-index: 10;
+        
+
+        a {
+            color: $darkBlue;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__links{
+        
+        a{
+            position: relative;
+            font-size: $font-sm;
+            color: $GrayishBlue;
+            transition: color 300ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover{
+                color: $darkBlue;
+
+                &::before{
+                    opacity: 1;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+//hamburger opn styles

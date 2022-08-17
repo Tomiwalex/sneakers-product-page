@@ -1,0 +1,102 @@
+body{
+    font-family: 'Kumbh Sans';
+    overflow-x: hidden;  
+    background-color:$White ;
+    position: relative;
+}
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1113px;
+    padding: 0 31px;
+    margin: 0 auto;
+}
+
+.cart-bag{
+    position: absolute;
+    min-height: 232px;
+    top: 67px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 16;
+    background-color: white;
+    box-shadow: 0 12px 14px rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    visibility: hidden;
+
+    #par, .par{
+        background-color: $Orange;
+        width: 80%;
+        text-align: center;
+        position: relative;
+        left: 5%;
+        right: 5%;
+        padding: 18px;
+        border-radius: 8px;
+        color: $White;
+        font-size: 16px;
+        font-weight: $font-lg;
+        display: none;
+        transition: all 250ms ease-in-out;
+        
+        &:hover {
+            background-color: #FFAC6A;
+        }
+    }
+
+    #empty, .empty{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        font-weight: 500;
+        color: $Darkgrayishblue;
+        -ms-flex-line-pack: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cart-item, .cart-item{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        #cart-image{
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+        }
+        .txt{
+            color: $Darkgrayishblue;
+            font-weight: $font-med;
+
+            b{
+                color: $Veryvarkblue;
+            }
+            span{
+                line-height: 1.9;
+            }
+        }
+    }
+
+    @include breakpoint-up(medium){
+        width: 400px;
+        transform: none;
+        right: 3%;
+        left: unset;
+        top: 12%;
+    }
+
+    .title{
+        padding: 15px;
+        border-bottom: 2px solid rgb(197, 188, 188);
+    }
+}

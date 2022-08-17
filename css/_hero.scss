@@ -1,0 +1,92 @@
+.hero{
+    background-color: $VeryLightGray;
+    
+    .container{
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+    
+  
+    &__image{
+        position: relative;
+        background-image: url("../images/bg-intro-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+
+        @include breakpoint-up(medium){
+            min-height: 25rem;
+        }
+
+        @include breakpoint-up(large){
+            flex: 3;
+            order: 2;
+            height: 41rem;
+            background-image: none;
+            //background-image: url('/images/bg-intro-desktop.svg');
+            //background-position: left center;
+        }
+
+        &::after{
+            content: "";
+            background-image: url("../images/image-mockups.png");
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            @include breakpoint-up(large){
+                width: 120%;
+                height: 122%;
+                background-size: 94%;
+                background-position: center 150%;
+                left: 22%;
+            }
+            
+        }
+
+        &::before{
+
+            @include breakpoint-up(medium){
+                background-size: 52%;
+            }
+            
+            @include breakpoint-up(large){
+                content: "";
+                background-image: url('../images/bg-intro-desktop.svg');
+                //background-size: 93%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                position: absolute;
+                height: 100%;
+                width: 150%;
+                background-size: 122%;
+                background-position: 0% 83%;
+            }
+        }
+
+    }
+
+    &__text{
+        text-align: center;
+        
+
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+
+        
+        p{
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+        }
+    }
+}

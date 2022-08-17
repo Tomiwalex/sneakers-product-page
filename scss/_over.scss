@@ -1,0 +1,105 @@
+.lay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+    visibility: hidden;
+    background-color: $Blacktransp;
+}
+
+.over-display{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 13;
+    padding: auto auto;
+    visibility: hidden;
+
+    #quit{
+        @include breakpoint-up(medium){
+            left: 71%;
+        }
+        position: relative;     
+        top: 2%;
+        left: 86%;
+    }
+
+    
+
+    .mySwiper3{
+        width: 90%;
+        margin: 40px auto;
+        @include breakpoint-up(medium){
+            width: 50%;
+        }
+
+        .swiper-slide{
+            width: 100%;
+            text-align: center;
+
+            img{
+                width: 92%;
+                height: 430px !important;
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .mySwiper4{
+        width: 90%;
+        margin-top: 30px;
+        @include breakpoint-up(medium){
+            width: 50%;
+        }
+
+        .swiper-slide{
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: 100px;
+                margin: 0 auto;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        color: $Darkgrayishblue;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        top: 50%;
+    }
+
+    .swiper-button-next{
+        right: 8px;
+    }
+    .swiper-button-prev{
+        right: -1px;
+    }
+
+
+
+    .swiper-button-next:after, 
+    .swiper-button-prev:after{
+        font-size: 10px;               
+        font-weight: 900;
+    }
+
+    .swiper-slide-thumb-active{
+        img{
+            border: 3px rgb(255, 94, 0) solid;
+            position: relative;
+            filter: brightness(140%);
+            
+            
+        }               
+    }
+}

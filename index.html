@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="././images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Kumbh+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/style.css">
+  <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+  
+  <title>Sneakers-E-commerce product-page </title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<section class="headers">
+
+  <div class="container">
+    <div class="header">
+      <div class="one">
+        <img src="./images/icon-menu.svg" id="menu" alt="icon-menu" class="h-f-t menu">
+      
+        <img src="./images/logo.svg" alt="logo">
+      
+        <div class="links h-f-m">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      
+
+      <div class="profile">
+        <img src="./images/icon-cart.svg" alt="cart" class="cart" id="cart">
+        <b class="tally" id="tally">0</b>
+        <img src="./images/image-avatar.png" alt="profil-pic" class="pic">
+      </div>
+
+      <div class="ham h-f-t" id="ham">
+        <img src="./images/icon-close.svg" alt="exit-icon" id="exit">
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        
+      </div>
+      <div class="overlay h-f-t" id="over"></div>
+    </div>
+  </div>
+</section>
+
+<!--cart html -->
+<div class="cart-bag" id="cart-bag">
+  <div class="title"><b>Cart</b></div>
+  <div class="cart-details">
+    <!-- <div id="cart-item">
+
+    </div>  -->
+  </div>
+  <p id="empty">Your list is empty</p>
+
+  <p id="par">Checkout</p>
+</div>
+
+<!--image swiper section-->
+<section class="swipers">
+  <div class="big-box">
+    <div class="container">
+      <div class="swiper mySwiper2" >
+        <div class="swiper-wrapper " id="mym">
+          <div class="swiper-slide">
+           <img id="my" src="./images/image-product-1.jpg" alt="img1">
+          </div>
+          <div class="swiper-slide">
+            <img id="item" src="./images/image-product-2.jpg" alt="img2">
+          </div>
+          <div class="swiper-slide">
+            <img id="my" src="./images/image-product-3.jpg" alt="img3">
+          </div>
+          <div class="swiper-slide">
+            <img id="my" src="./images/image-product-4.jpg" alt="img4">
+          </div>
+        </div>
+      </div>
+     <!--siper navigation button-->
+      <div class="swiper-button-next "></div>
+      <div class="swiper-button-prev "></div>
+    
+      <!--slider thumbnail-->
+      <div thumbsSlider="" class="swiper mySwiper h-f-m">
+        <div class="swiper-wrapper">
+  
+          <div class="swiper-slide">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="img1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="img2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="img3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="img4">
+          </div>
+    
+        </div>
+      </div>
+  
+    </div>
+
+    <div class="about" id="about">
+      <b class="company">SNEAKER COMPANY</b>
+      
+      <h2>
+        Fall Limited Edition Sneakers
+      </h2>
+
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <h2 class="price">$125.00</h2>
+      <h3 class="cite">50%</h3>
+       <s>$250.00</s>
+
+      <div class="number" id="ron">
+        <img id="minus" src="./images/icon-minus.svg" alt="minus-icon">
+        
+        <b id="number">0</b>
+
+        <img id="plus" src="./images/icon-plus.svg" alt="plus-icon">
+      </div>
+
+      <div class="add" id="add" onclick="addcartclicked(add)">
+         <img src="./images/icon-cart - white.svg" alt="cart-image">
+         Add to cart
+      </div>
+
+    </div>
+  </div>
+    
+</section>
+
+<div class="lay" id="lay"></div>
+<div class="over-display" id="over-display">
+  <img id="quit" src="./images/icon-close.svg" alt="exit-icon">
+
+  <div class="swiper mySwiper3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+       <img src="./images/image-product-1.jpg" alt="img1">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-2.jpg" alt="img2">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-3.jpg" alt="img3">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-4.jpg" alt="img4">
+      </div>
+    </div>
+
+    <div class="swiper-button-next "></div>
+  <div class="swiper-button-prev "></div>
+  </div>
+ <!--siper navigation button-->
+  
+
+  <!--slider thumbnail-->
+  <div thumbsSlider="" class="swiper mySwiper4">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="img1">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="img2">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="img3">
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="img4">
+      </div>
+
+    </div>
+  </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tomiwa Alex</a>.
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: false,
+      spaceBetween: 20,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSliderProgress: true,
+    });
+    var swiper4 = new Swiper(".mySwiper4", {
+      loop: false,
+      spaceBetween: 20,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSliderProgress: true,
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+
+    var swiper3 = new Swiper(".mySwiper3", {
+      loop: true,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper4,
+      },
+    });
+  </script>
+</body>
+</html>
